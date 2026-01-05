@@ -1,0 +1,141 @@
+<p class="tagline">
+  AI가 만들고, 사람이 고른 이야기들
+<a href="https://forms.gle/jEP33TBgkdH185ef9" class="submit-btn" target="_blank">
+   AI 콘텐츠 공유하기
+</a>
+</p>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>AIFLIX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial;
+    }
+
+    .card {
+      display: inline-block;
+      width: 180px;
+      background-color: #333;
+      margin: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: inline-block;
+    }
+/* ===== Netflix-style hover play button ===== */
+
+.card {
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.play-btn {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+}
+
+.card:hover .play-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tagline {
+  color: #aaa;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.submit-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #e50914;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+  </style>
+</head>
+
+<body>
+  <h1>AIFLIX</h1>
+  <p>AI Content Streaming Platform</p>
+</body>
+</html>
+
+<div>
+  <h2>오늘의 AI 이야기</h2>
+
+<h3>🔥 오늘의 AI 이야기</h3>
+<div class="row">
+
+  <a href="https://youtu.be/1cZ8Mr03GNY?si=nOcGaiALxT9-HAvB" target="_blank">
+  <div class="card">
+   <div class="thumb">
+    <img src="sf썸네일.png" alt="AI 단편 SF">
+    <button class="play-btn">▶</button>
+   </div>
+    <p>🤖 AI 단편 SF</p>
+    <p>출처: YouTube</p>
+  </div>
+</a>
+
+  <a href="https://youtu.be/whM5N482qD0?si=Ml2bn1Pg8-VTX13m" target="_blank">
+  <div class="card">
+   <div class="thumb">
+    <img src="판타지썸네일.png" alt="AI 판타지">
+    <button class="play-btn">▶</button>
+   </div>
+    <p>🧙 AI 판타지</p>
+    <p>출처: YouTube</p>
+  </div>
+</a>
+
+  <a href="https://youtu.be/g4yh7iO3_FY?si=qLGQNOvzNjp64GEM" target="_blank">
+  <div class="card">
+   <div class="thumb">
+    <img src="공포썸네일.png" alt="AI 공포">
+    <button class="play-btn">▶</button>
+   </div>
+    <p>👻 AI 공포</p>
+    <p>출처: YouTube</p>
+  </div>
+</a>
+
+</div>
