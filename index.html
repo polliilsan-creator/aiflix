@@ -19,22 +19,28 @@
       font-family: Arial;
     }
 
-    .card {
-      display: inline-block;
-      width: 180px;
-      background-color: #333;
-      margin: 10px;
-      padding: 10px;
-      box-sizing: border-box;
-    }
+.card {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  width: 180px;
+  background-color: #333;
+  margin: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+  position: relative;
+  vertical-align: top;
+}
 
-    .card img {
-      width: 100%;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-
+.card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  flex-shrink: 0;
+}
     a {
       text-decoration: none;
       color: inherit;
@@ -46,33 +52,22 @@
   position: relative;
 }
 
-.card img {
-  width: 100%;
-  display: block;
-}
-
-.play-btn {
+.play-button {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease;
-  
-  background: rgba(0,0,0,0.6);
+  font-size: 26px;
   color: white;
-  border: none;
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  font-size: 24px;
+  padding: 8px 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-.card:hover .play-btn {
+.card:hover .play-button {
   opacity: 1;
-  pointer-events: auto;
 }
 
 .tagline {
@@ -90,6 +85,24 @@
   font-size: 14px;
   margin-bottom: 20px;
 }
+.card-title {
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-size: 13px;
+  color: #00ff88;
+  line-height: 1.3;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-source {
+  margin-top: 2px;
+  font-size: 11px;
+  color: #999;
+  opacity: 0.8;
+}
   </style>
 </head>
 
@@ -99,43 +112,81 @@
 </body>
 </html>
 
-<div>
-  <h2>오늘의 AI 이야기</h2>
-
+<div>오후 10:57 2026-01-07
 <h3>🔥 오늘의 AI 이야기</h3>
 <div class="row">
 
-  <a href="https://youtu.be/1cZ8Mr03GNY?si=nOcGaiALxT9-HAvB" target="_blank">
-  <div class="card">
-   <div class="thumb">
-    <img src="sf썸네일.png" alt="AI 단편 SF">
-    <button class="play-btn">▶</button>
-   </div>
-    <p>🤖 AI 단편 SF</p>
-    <p>출처: YouTube</p>
-  </div>
+<h2 class="category-title">AI 영상</h2>
+
+<div class="content">
+  <a href="https://www.youtube.com/watch?v=IPvoi5sfXok" class="card" target="_blank">
+    <img src="https://img.youtube.com/vi/IPvoi5sfXok/hqdefault.jpg">
+    <div class="play-button">▶</div>
+    <p class="card-title">요새 제일 핫한 AI영상...</p>
+    <p class="card-source">출처: 유튜브</p>
+  </a>
+
+  <a href="https://www.youtube.com/watch?v=z_kFSrzrJtY" class="card" target="_blank">
+    <img src="https://img.youtube.com/vi/z_kFSrzrJtY/hqdefault.jpg">
+    <div class="play-button">▶</div>
+    <p class="card-title">파도+화산+빙하+우주 자르기</p>
+    <p class="card-source">출처: 유튜브</p>
+  </a>
+
+  <a href="https://www.youtube.com/watch?v=0fG3EmGGovA" class="card" target="_blank">
+    <img src="https://img.youtube.com/vi/0fG3EmGGovA/hqdefault.jpg">
+    <div class="play-button">▶</div>
+    <p class="card-title">매콤한 유리라면 만들어 먹기</p>
+    <p class="card-source">출처: 유튜브</p>
+  </a>
+</div>
+
+<h2 class="category-title">AI 애니메이션</h2>
+
+<div class="content">
+  <a href="https://www.youtube.com/watch?v=uhdKXlnHKUg" class="card" target="_blank">
+    <img src="https://img.youtube.com/vi/uhdKXlnHKUg/hqdefault.jpg">
+    <div class="play-button">▶</div>
+    <p class="card-title">버림받은 고양이의 슬픈 엔딩</p>
+    <p class="card-source">출처: 유튜브</p>
+  </a>
+
+  <a href="https://www.youtube.com/watch?v=H56p1vhqPmg" class="card" target="_blank">
+    <img src="https://img.youtube.com/vi/H56p1vhqPmg/hqdefault.jpg">
+    <div class="play-button">▶</div>
+    <p class="card-title">1살~100살 엘사</p>
+    <p class="card-source">출처: 유튜브</p>
+  </a>
+
+  <a href="https://www.youtube.com/watch?v=RIJjXpkAq4M" class="card" target="_blank">
+    <img src="https://img.youtube.com/vi/RIJjXpkAq4M/hqdefault.jpg">
+    <div class="play-button">▶</div>
+    <p class="card-title">요리하는 천재 고양이</p>
+    <p class="card-source">출처: 유튜브</p>
+  </a>
+</div>
+
+<h2 class="category-title">AI 소설</h2>
+
+<div class="content">
+<a href="https://medium.com/@tsumugi-iori/silent-ink-sumimoku-墨黙-b25dbcdd74c1" class="card" target="_blank">
+  <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*tGDMhqLq4q9dqR6xOEJB1g.png">
+  <div class="play-button">📖</div>
+  <p class="card-title">침묵 먹-보구모쿠(墨黙)</p>
+  <p class="card-source">출처: Medium</p>
 </a>
 
-  <a href="https://youtu.be/whM5N482qD0?si=Ml2bn1Pg8-VTX13m" target="_blank">
-  <div class="card">
-   <div class="thumb">
-    <img src="판타지썸네일.png" alt="AI 판타지">
-    <button class="play-btn">▶</button>
-   </div>
-    <p>🧙 AI 판타지</p>
-    <p>출처: YouTube</p>
-  </div>
+<a href="https://medium.com/@sdh.kingfieldheath/cold-calculations-0ff7052c73d3" class="card" target="_blank">
+  <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*nsM9x8D68ZPUWiQ58ctIjA.png">
+  <div class="play-button">📖</div>
+  <p class="card-title">콜드 컴퓨팅스</p>
+  <p class="card-source">출처: Medium</p>
 </a>
 
-  <a href="https://youtu.be/g4yh7iO3_FY?si=qLGQNOvzNjp64GEM" target="_blank">
-  <div class="card">
-   <div class="thumb">
-    <img src="공포썸네일.png" alt="AI 공포">
-    <button class="play-btn">▶</button>
-   </div>
-    <p>👻 AI 공포</p>
-    <p>출처: YouTube</p>
-  </div>
+<a href="https://medium.com/@adansyuko/2008-ai-bubble-burst-edition-4be9cd310d0c" class="card" target="_blank">
+  <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*eOAjZus_Jda6f1U5">
+  <div class="play-button">📖</div>
+  <p class="card-title">2028:AI버블 버스트 에디션</p>
+  <p class="card-source">출처: Medium</p>
 </a>
-
 </div>
