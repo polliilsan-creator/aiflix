@@ -198,12 +198,17 @@
   }
 
   .top-right {
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
   }
 
   .submit-btn,
   .discord-btn {
+    display: block;
     width: 100%;
+    box-sizing: border-box;
     text-align: center;
   }
 }
