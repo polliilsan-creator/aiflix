@@ -196,10 +196,26 @@ h2, h3 {
     box-sizing: border-box;
   }
 }
+.bg-logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("aiflix-logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.12;
+  z-index: -1;
+}
 </style>
 </head>
 
 <body>
+<div class="bg-logo"></div>
 
 <div class="top-bar">
   <div class="top-left">
