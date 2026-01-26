@@ -24,6 +24,8 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 10px 14px;
+  position: relative;
+  z-index: 10;
 }
 
 .top-left {
@@ -156,11 +158,16 @@ h2, h3 {
 }
 
 .review-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
   margin-top: 4px;
   font-size: 11px;
   color: #aaa;
   border-top: 1px solid #333;
   padding-top: 3px;
+  line-height: 1.4;
 }
 
 .footer-note {
@@ -209,7 +216,9 @@ h2, h3 {
 
   opacity: 0.12;
   z-index: -1;
+  pointer-events: none;
 }
+
 .aiflix-logo {
   width: 800px;
   max-width: 80%;
@@ -233,6 +242,25 @@ h2, h3 {
   .hero-buttons {
     margin-top: 10px;
   }
+}
+.review-text {
+  display: inline;
+}
+
+.delete-review {
+  display: inline;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  color: #666;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.delete-review:hover {
+  color: #ff5555;
 }
 </style>
 </head>
@@ -259,7 +287,9 @@ h2, h3 {
 <h2>AI 영상</h2>
 <div class="content">
 
-<div class="card" data-link="https://vimeo.com/1153706800?share=copy&fl=cl&fe=ci">
+<div class="card" 
+     data-link="https://vimeo.com/1153706800?share=copy&fl=cl&fe=ci"
+     data-id="ai-video-1">
   <img src="https://i.vimeocdn.com/video/2105765207-37a715aed85a7df8c45070e9c598880c7ae132e5ba5d57935dc8e64aa3f1059e-d_2400">
   <div class="play-button">▶</div>
   <p class="card-title">AI TRUE</p>
@@ -272,7 +302,7 @@ h2, h3 {
   </div>
 </div>
 
-<div class="card" data-link="https://www.youtube.com/watch?v=IPvoi5sfXok">
+<div class="card" data-link="https://www.youtube.com/watch?v=IPvoi5sfXok" data-id="ai-video-2">
   <img src="https://img.youtube.com/vi/IPvoi5sfXok/hqdefault.jpg">
   <div class="play-button">▶</div>
   <p class="card-title">요새 제일 핫한 AI영상...</p>
@@ -285,7 +315,7 @@ h2, h3 {
   </div>
 </div>
 
-<div class="card" data-link="https://www.youtube.com/watch?v=z_kFSrzrJtY">
+<div class="card" data-link="https://www.youtube.com/watch?v=z_kFSrzrJtY" data-id="ai-video-3">
   <img src="https://img.youtube.com/vi/z_kFSrzrJtY/hqdefault.jpg">
   <div class="play-button">▶</div>
   <p class="card-title">파도+화산+빙하+우주 자르기</p>
@@ -298,7 +328,7 @@ h2, h3 {
   </div>
 </div>
 
-<div class="card" data-link="https://www.youtube.com/watch?v=0fG3EmGGovA">
+<div class="card" data-link="https://www.youtube.com/watch?v=0fG3EmGGovA" data-id="ai-video-4">
   <img src="https://img.youtube.com/vi/0fG3EmGGovA/hqdefault.jpg">
   <div class="play-button">▶</div>
   <p class="card-title">매콤한 유리라면 만들어 먹기</p>
@@ -311,7 +341,7 @@ h2, h3 {
   </div>
 </div>
 
-<div class="card" data-link="https://vimeo.com/1119029530?share=copy&fl=cl&fe=ci">
+<div class="card" data-link="https://vimeo.com/1119029530?share=copy&fl=cl&fe=ci" data-id="ai-video-5">
   <img src="https://i.vimeocdn.com/video/2059385929-e7bbb7b26252a6a8a2bbebfd98e018aecad53a880de97ee19084cb95b8090a48-d_2400">
   <div class="play-button">▶</div>
   <p class="card-title">작은날개</p>
@@ -324,7 +354,7 @@ h2, h3 {
   </div>
 </div>
 
-<div class="card" data-link="https://www.youtube.com/watch?v=uhdKXlnHKUg">
+<div class="card" data-link="https://www.youtube.com/watch?v=uhdKXlnHKUg" data-id="ai-video-6">
   <img src="https://img.youtube.com/vi/uhdKXlnHKUg/hqdefault.jpg">
   <div class="play-button">▶</div>
   <p class="card-title">버림받은 고양이의 슬픈 엔딩</p>
@@ -337,7 +367,7 @@ h2, h3 {
   </div>
 </div>
 
-<div class="card" data-link="https://www.youtube.com/watch?v=H56p1vhqPmg">
+<div class="card" data-link="https://www.youtube.com/watch?v=H56p1vhqPmg" data-id="ai-video-7">
   <img src="https://img.youtube.com/vi/H56p1vhqPmg/hqdefault.jpg">
   <div class="play-button">▶</div>
   <p class="card-title">1살~100살 엘사</p>
@@ -350,7 +380,7 @@ h2, h3 {
   </div>
 </div>
 
-<div class="card" data-link="https://www.youtube.com/watch?v=RIJjXpkAq4M">
+<div class="card" data-link="https://www.youtube.com/watch?v=RIJjXpkAq4M" data-id="ai-video-8">
   <img src="https://img.youtube.com/vi/RIJjXpkAq4M/hqdefault.jpg">
   <div class="play-button">▶</div>
   <p class="card-title">요리하는 천재 고양이</p>
@@ -368,7 +398,7 @@ h2, h3 {
 <h2>AI 뮤직</h2>
 <div class="content">
 
-<div class="card" data-link="https://youtu.be/4U7I22y2VMU">
+<div class="card" data-link="https://youtu.be/4U7I22y2VMU" data-id="ai-video-9">
   <img src="https://img.youtube.com/vi/4U7I22y2VMU/hqdefault.jpg">
   <div class="play-button">▶</div>
   <p class="card-title">달빛라운지 1집</p>
@@ -381,7 +411,7 @@ h2, h3 {
   </div>
 </div>
 
-<div class="card" data-link="https://youtu.be/yzjfeRxk-L8">
+<div class="card" data-link="https://youtu.be/yzjfeRxk-L8" data-id="ai-video-10">
   <img src="https://img.youtube.com/vi/yzjfeRxk-L8/hqdefault.jpg">
   <div class="play-button">▶</div>
   <p class="card-title">달빛라운지 2집</p>
@@ -394,7 +424,7 @@ h2, h3 {
   </div>
 </div>
 
-<div class="card" data-link="https://youtu.be/HNlsWOHcL8A">
+<div class="card" data-link="https://youtu.be/HNlsWOHcL8A" data-id="ai-video-11">
   <img src="https://img.youtube.com/vi/HNlsWOHcL8A/hqdefault.jpg">
   <div class="play-button">▶</div>
   <p class="card-title">달빛라운지 3집</p>
@@ -407,7 +437,7 @@ h2, h3 {
   </div>
 </div>
 
-<div class="card" data-link="https://youtu.be/UT7ZaUp454A">
+<div class="card" data-link="https://youtu.be/UT7ZaUp454A" data-id="ai-video-12">
   <img src="https://img.youtube.com/vi/UT7ZaUp454A/hqdefault.jpg">
   <div class="play-button">▶</div>
   <p class="card-title">달빛라운지 4집</p>
@@ -420,7 +450,7 @@ h2, h3 {
   </div>
 </div>
 
-<div class="card" data-link="https://youtu.be/AkN_IAa2rFA">
+<div class="card" data-link="https://youtu.be/AkN_IAa2rFA" data-id="ai-video-13">
   <img src="https://img.youtube.com/vi/AkN_IAa2rFA/hqdefault.jpg">
   <div class="play-button">▶</div>
   <p class="card-title">달빛라운지 5집</p>
@@ -438,7 +468,7 @@ h2, h3 {
 <h2>AI 소설</h2>
 <div class="content">
 
-<div class="card" data-link="https://medium.com/@tsumugi-iori/silent-ink-sumimoku-墨黙-b25dbcdd74c1">
+<div class="card" data-link="https://medium.com/@tsumugi-iori/silent-ink-sumimoku-墨黙-b25dbcdd74c1" data-id="ai-video-14">
   <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*tGDMhqLq4q9dqR6xOEJB1g.png">
   <div class="play-button">📖</div>
   <p class="card-title">침묵 먹-보구모쿠(墨黙)</p>
@@ -451,7 +481,7 @@ h2, h3 {
   </div>
 </div>
 
-<div class="card" data-link="https://medium.com/@sdh.kingfieldheath/cold-calculations-0ff7052c73d3">
+<div class="card" data-link="https://medium.com/@sdh.kingfieldheath/cold-calculations-0ff7052c73d3" data-id="ai-video-15">
   <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*nsM9x8D68ZPUWiQ58ctIjA.png">
   <div class="play-button">📖</div>
   <p class="card-title">콜드 컴퓨팅스</p>
@@ -464,7 +494,7 @@ h2, h3 {
   </div>
 </div>
 
-<div class="card" data-link="https://medium.com/@adansyuko/2008-ai-bubble-burst-edition-4be9cd310d0c">
+<div class="card" data-link="https://medium.com/@adansyuko/2008-ai-bubble-burst-edition-4be9cd310d0c" data-id="ai-video-16">
   <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*eOAjZus_Jda6f1U5">
   <div class="play-button">📖</div>
   <p class="card-title">2028: AI 버블 버스트 에디션</p>
@@ -485,11 +515,19 @@ h2, h3 {
 </footer>
 
 <script>
+const USER_KEY = "aiflix_user_id";
+let currentUserId = localStorage.getItem(USER_KEY);
+
+if (!currentUserId) {
+  currentUserId = "user_" + Math.random().toString(36).substr(2, 9);
+  localStorage.setItem(USER_KEY, currentUserId);
+}
+
+const ADMIN_ID = "admin_master_001";
+
 document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("click", e => {
-    if (e.target.closest(".review-toggle") || e.target.closest(".review-panel")) return;
-    window.open(card.dataset.link, "_blank");
-  });
+  const cardId = card.dataset.id;
+  const storageKey = "reviews_" + cardId;
 
   const toggle = card.querySelector(".review-toggle");
   const panel = card.querySelector(".review-panel");
@@ -498,6 +536,13 @@ document.querySelectorAll(".card").forEach(card => {
   const list = panel.querySelector(".review-list");
   const count = toggle.querySelector(".review-count");
 
+  const ADMIN_KEY = "aiflix_admin";
+
+  card.addEventListener("click", e => {
+    if (e.target.closest(".review-toggle") || e.target.closest(".review-panel")) return;
+    window.open(card.dataset.link, "_blank");
+  });
+
   toggle.addEventListener("click", e => {
     e.stopPropagation();
     panel.style.display = panel.style.display === "block" ? "none" : "block";
@@ -505,24 +550,71 @@ document.querySelectorAll(".card").forEach(card => {
 
   input.addEventListener("click", e => e.stopPropagation());
 
-  button.addEventListener("click", e => {
-    e.stopPropagation();
-    if (!input.value.trim()) return;
+  if (!localStorage.getItem(ADMIN_KEY)) {
+    localStorage.setItem("aiflix_user_id", "admin_master_001");
+  }
 
+function loadReviews() {
+  const saved = JSON.parse(localStorage.getItem(storageKey)) || [];
+  list.innerHTML = "";
+
+  saved.forEach(item => {
     const div = document.createElement("div");
     div.className = "review-item";
-    div.textContent = "• " + input.value;
-    list.prepend(div);
 
-    while (list.children.length > 2) {
-      list.removeChild(list.lastChild);
+    const spanText = document.createElement("span");
+    spanText.className = "review-text";
+    spanText.textContent = "• " + item.text;
+
+    div.appendChild(spanText);
+
+    const canDelete =
+      item.author === currentUserId || currentUserId === ADMIN_ID;
+
+    if (canDelete) {
+      const del = document.createElement("span");
+      del.className = "delete-review";
+      del.textContent = " x";
+
+      del.addEventListener("click", e => {
+        e.stopPropagation();
+        let reviews = JSON.parse(localStorage.getItem(storageKey)) || [];
+        reviews = reviews.filter(r => r.id !== item.id);
+        localStorage.setItem(storageKey, JSON.stringify(reviews));
+        loadReviews();
+      });
+
+      div.appendChild(del);
     }
 
-    count.textContent = parseInt(count.textContent) + 1;
-    input.value = "";
+    list.appendChild(div);
   });
+
+  count.textContent = saved.length;
+}
+
+button.addEventListener("click", e => {
+  e.stopPropagation();
+  const value = input.value.trim();
+  if (!value) return;
+
+  let reviews = JSON.parse(localStorage.getItem(storageKey)) || [];
+
+reviews.unshift({
+  id: Date.now(),
+  text: value,
+  author: currentUserId
+});
+
+  if (reviews.length > 20) reviews.pop();
+
+  localStorage.setItem(storageKey, JSON.stringify(reviews));
+  loadReviews();
+  input.value = "";
+});
+
+  loadReviews();
 });
 </script>
-
 </body>
 </html>
