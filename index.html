@@ -262,6 +262,53 @@ h2, h3 {
 .delete-review:hover {
   color: #ff5555;
 }
+.aiflix-manifesto {
+  text-align: center;
+  margin: 10px auto 30px;
+  font-size: 18px;
+  color: #aaa;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeFloatIn 2s ease forwards;
+  text-shadow: 0 0 10px rgba(0, 200, 255, 0.3);
+}
+
+.aiflix-manifesto strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 22px;
+  color: #00eaff;
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
+@keyframes fadeFloatIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 8px rgba(0, 200, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 18px rgba(0, 200, 255, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 8px rgba(0, 200, 255, 0.3);
+  }
+}
+@media (max-width: 600px) {
+  .aiflix-manifesto {
+    font-size: 15px;
+    margin: 6px 10px 20px;
+  }
+
+  .aiflix-manifesto strong {
+    font-size: 18px;
+  }
+}
 </style>
 </head>
 
@@ -280,6 +327,11 @@ h2, h3 {
 
 <div class="logo-wrap">
   <img src="aiflix-logo(1).png" class="aiflix-logo">
+</div>
+
+<div class="aiflix-manifesto">
+  한 줄 남기다 보면,<br>
+  <strong>어느새 당신의 작품이 올라오는 곳</strong>
 </div>
 
 <h3>🔥 오늘 당신의 AI 이야기</h3>
