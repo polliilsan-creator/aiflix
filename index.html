@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html>.logo-wrap {
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>AIFLIX</title>
+<title>AI Sqare</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -55,8 +55,10 @@ a {
 }
 
 .logo-wrap {
-  text-align: center;
-  padding: -50px 0 -100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .logo-img {
@@ -204,19 +206,8 @@ h2, h3 {
 }
 .bg-logo {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-
-  background-image: url("aiflix-logo.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  opacity: 0.12;
+  inset: 0;
   z-index: -1;
-  pointer-events: none;
 }
 
 .aiflix-logo {
@@ -309,7 +300,46 @@ h2, h3 {
     font-size: 18px;
   }
 }
+.review-input-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.add-review {
+  display: inline;
+  margin-left: 6px;
+  font-size: 12px;
+  color: #00ff88;
+  cursor: pointer;
+  user-select: none;
+}
+
+.add-review {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.add-review:hover {
+  color: #66ffbb;
+}
+
+.aiflix-logo-text {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+@media (max-width: 768px) {
+ .aiflix-logo-text {
+   font-size: 48px;
+   font-weight: 800;
+   letter-spacing: -1px;
+ }
+}
 </style>
+
 </head>
 
 <body>
@@ -326,7 +356,7 @@ h2, h3 {
 </div>
 
 <div class="logo-wrap">
-  <img src="aiflix-logo(1).png" class="aiflix-logo">
+  <div class="aiflix-logo-text">AI Square</div>
 </div>
 
 <div class="aiflix-manifesto">
@@ -348,8 +378,10 @@ h2, h3 {
   <p class="card-source">출처: Vimeo</p>
   <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
   <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
+    <div class="review-input-row">
+      <input type="text" placeholder="한 줄만 남겨주세요">
+      <span class="add-review">➕</span>
+    </div>
     <div class="review-list"></div>
   </div>
 </div>
@@ -361,8 +393,10 @@ h2, h3 {
   <p class="card-source">출처: 유튜브</p>
   <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
   <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
+    <div class="review-input-row">
+      <input type="text" placeholder="한 줄만 남겨주세요">
+      <span class="add-review">➕</span>
+    </div>
     <div class="review-list"></div>
   </div>
 </div>
@@ -374,8 +408,10 @@ h2, h3 {
   <p class="card-source">출처: 유튜브</p>
   <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
   <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
+    <div class="review-input-row">
+      <input type="text" placeholder="한 줄만 남겨주세요">
+      <span class="add-review">➕</span>
+    </div>
     <div class="review-list"></div>
   </div>
 </div>
@@ -387,8 +423,10 @@ h2, h3 {
   <p class="card-source">출처: 유튜브</p>
   <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
   <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
+    <div class="review-input-row">
+      <input type="text" placeholder="한 줄만 남겨주세요">
+      <span class="add-review">➕</span>
+    </div>
     <div class="review-list"></div>
   </div>
 </div>
@@ -400,47 +438,10 @@ h2, h3 {
   <p class="card-source">출처: Vimeo</p>
   <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
   <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
-    <div class="review-list"></div>
-  </div>
-</div>
-
-<div class="card" data-link="https://www.youtube.com/watch?v=uhdKXlnHKUg" data-id="ai-video-6">
-  <img src="https://img.youtube.com/vi/uhdKXlnHKUg/hqdefault.jpg">
-  <div class="play-button">▶</div>
-  <p class="card-title">버림받은 고양이의 슬픈 엔딩</p>
-  <p class="card-source">출처: 유튜브</p>
-  <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
-  <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
-    <div class="review-list"></div>
-  </div>
-</div>
-
-<div class="card" data-link="https://www.youtube.com/watch?v=H56p1vhqPmg" data-id="ai-video-7">
-  <img src="https://img.youtube.com/vi/H56p1vhqPmg/hqdefault.jpg">
-  <div class="play-button">▶</div>
-  <p class="card-title">1살~100살 엘사</p>
-  <p class="card-source">출처: 유튜브</p>
-  <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
-  <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
-    <div class="review-list"></div>
-  </div>
-</div>
-
-<div class="card" data-link="https://www.youtube.com/watch?v=RIJjXpkAq4M" data-id="ai-video-8">
-  <img src="https://img.youtube.com/vi/RIJjXpkAq4M/hqdefault.jpg">
-  <div class="play-button">▶</div>
-  <p class="card-title">요리하는 천재 고양이</p>
-  <p class="card-source">출처: 유튜브</p>
-  <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
-  <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
+    <div class="review-input-row">
+      <input type="text" placeholder="한 줄만 남겨주세요">
+      <span class="add-review">➕</span>
+    </div>
     <div class="review-list"></div>
   </div>
 </div>
@@ -457,8 +458,10 @@ h2, h3 {
   <p class="card-source">출처: 유튜브</p>
   <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
   <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
+    <div class="review-input-row">
+      <input type="text" placeholder="한 줄만 남겨주세요">
+      <span class="add-review">➕</span>
+    </div>
     <div class="review-list"></div>
   </div>
 </div>
@@ -470,8 +473,10 @@ h2, h3 {
   <p class="card-source">출처: 유튜브</p>
   <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
   <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
+    <div class="review-input-row">
+      <input type="text" placeholder="한 줄만 남겨주세요">
+      <span class="add-review">➕</span>
+    </div>
     <div class="review-list"></div>
   </div>
 </div>
@@ -483,34 +488,10 @@ h2, h3 {
   <p class="card-source">출처: 유튜브</p>
   <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
   <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
-    <div class="review-list"></div>
-  </div>
-</div>
-
-<div class="card" data-link="https://youtu.be/UT7ZaUp454A" data-id="ai-video-12">
-  <img src="https://img.youtube.com/vi/UT7ZaUp454A/hqdefault.jpg">
-  <div class="play-button">▶</div>
-  <p class="card-title">달빛라운지 4집</p>
-  <p class="card-source">출처: 유튜브</p>
-  <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
-  <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
-    <div class="review-list"></div>
-  </div>
-</div>
-
-<div class="card" data-link="https://youtu.be/AkN_IAa2rFA" data-id="ai-video-13">
-  <img src="https://img.youtube.com/vi/AkN_IAa2rFA/hqdefault.jpg">
-  <div class="play-button">▶</div>
-  <p class="card-title">달빛라운지 5집</p>
-  <p class="card-source">출처: 유튜브</p>
-  <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
-  <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
+    <div class="review-input-row">
+      <input type="text" placeholder="한 줄만 남겨주세요">
+      <span class="add-review">➕</span>
+    </div>
     <div class="review-list"></div>
   </div>
 </div>
@@ -527,8 +508,10 @@ h2, h3 {
   <p class="card-source">출처: Medium</p>
   <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
   <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
+    <div class="review-input-row">
+      <input type="text" placeholder="한 줄만 남겨주세요">
+      <span class="add-review">➕</span>
+    </div>
     <div class="review-list"></div>
   </div>
 </div>
@@ -540,8 +523,10 @@ h2, h3 {
   <p class="card-source">출처: Medium</p>
   <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
   <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
+    <div class="review-input-row">
+      <input type="text" placeholder="한 줄만 남겨주세요">
+      <span class="add-review">➕</span>
+    </div>
     <div class="review-list"></div>
   </div>
 </div>
@@ -552,9 +537,11 @@ h2, h3 {
   <p class="card-title">2028: AI 버블 버스트 에디션</p>
   <p class="card-source">출처: Medium</p>
   <div class="review-toggle">💬 한 줄 감상 (<span class="review-count">0</span>)</div>
-  <div class="review-panel">
-    <input type="text" placeholder="한 줄만 남겨주세요">
-    <button>등록</button>
+   <div class="review-panel">
+    <div class="review-input-row">
+      <input type="text" placeholder="한 줄만 남겨주세요">
+      <span class="add-review">➕</span>
+    </div>
     <div class="review-list"></div>
   </div>
 </div>
@@ -584,7 +571,7 @@ document.querySelectorAll(".card").forEach(card => {
   const toggle = card.querySelector(".review-toggle");
   const panel = card.querySelector(".review-panel");
   const input = panel.querySelector("input");
-  const button = panel.querySelector("button");
+  const button = panel.querySelector(".add-review");
   const list = panel.querySelector(".review-list");
   const count = toggle.querySelector(".review-count");
 
